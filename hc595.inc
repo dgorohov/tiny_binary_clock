@@ -1,15 +1,15 @@
 ;
 ;	74hc595
-;		+-------+
-;	QB -|		|- VCC
-;	QC -|		|- QA
-;	QD -|		|- DATA
-;	QE -|		|- OE
-;	QF -|		|- LATCH
-;	QG -|		|- CLOCK
-;	QH -|		|- CLEAR
-;  GND -|		|- QH'
-;		+-------+
+;           +---+
+;   QB (1) -|	|- VCC
+;       QC -|	|- QA
+;       QD -|	|- DATA
+;       QE -|	|- OE
+;       QF -|	|- LATCH
+;       QG -|	|- CLOCK
+;       QH -|	|- CLEAR
+;      GND -|	|- QH'
+;           +---+
 ;
 ; DATA - is used to feed data into the shift register a bit at a time.
 ; CLOCK - is the clock for the shift register
@@ -28,6 +28,7 @@
 
 .equ HC595_OE_PORT 		= PORTB
 .equ HC595_OE_PORT_DIR 	= DDRB
+.equ HC595_OE_PIN 		= PINB
 
 .equ HC595_PORT 		= PORTD
 .equ HC595_PORT_DIR 	= DDRD
@@ -55,25 +56,25 @@ hc595_init:
 	out HC595_PORT_DIR, tmp
 
 	in tmp, HC595_PORT
-	in tmp_b, HC595_PORT
-	ori tmp_b, 1 << HC595_CLEAR
-	andi tmp, ~(1 << HC595_DATA) & ~(1 << HC595_LATCH) & ~(1 << HC595_CLK)
-	or tmp, tmp_b
+	sbr tmp, 1 << HC595_CLEAR
+	cbr tmp, (1 << HC595_DATA) | (1 << HC595_LATCH) | (1 << HC595_CLK)
 	out HC595_PORT, tmp
 
 	rcall hc595_reset
 
 	ret
 
-.macro hc595_enable
+hc595_toggle:
+	sbic HC595_OE_PIN, HC595_OE
 	cbi HC595_OE_PORT, HC595_OE
-.endm
 
-.macro hc595_disable
+	sbis HC595_OE_PIN, HC595_OE
 	sbi HC595_OE_PORT, HC595_OE
-.endm
+
+	ret
 
 hc595_send_byte:
+	push  r25
 	ldi r25, 0x08
 hc595_send_bit:
 	lsl r24
@@ -86,7 +87,6 @@ hc595_bit_done:
 
 	sbi HC595_PORT, HC595_CLK
 	nop
-	nop
 	cbi HC595_PORT, HC595_CLK
 
 	dec r25
@@ -96,6 +96,7 @@ hc595_bit_done:
 	nop
 	cbi HC595_PORT, HC595_LATCH
 
+	pop r25
 	ret
 
 hc595_reset:
@@ -107,8 +108,3 @@ hc595_reset:
 	cbi HC595_PORT, HC595_LATCH
 	ret
 
-
-column_map:
-	.db PD6, PD5, PD4, PD3
-row_map:
-	.db PB1, PB2, PB3, PB4

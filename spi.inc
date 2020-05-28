@@ -8,17 +8,13 @@
 
 spi_init:
 	in tmp, SPI_PORT_DIR
-	in tmp_b, SPI_PORT_DIR
-	andi tmp_b, ~(1 << MISO)
-	ori tmp, (1 << SCK) | (1 << MOSI)
-	or tmp, tmp_b
+	cbr tmp, (1 << MISO)
+	sbr tmp, (1 << SCK) | (1 << MOSI)
 	out SPI_PORT_DIR, tmp
 
 	in tmp, SPI_PORT
-	in tmp_b, SPI_PORT
-	andi tmp_b, ~(1 << SCK) & ~(1 << MISO)
-	ori tmp, (1 << MOSI)
-	or tmp, tmp_b
+	cbr tmp, (1 << SCK) | (1 << MISO)
+	sbr tmp, (1 << MOSI)
 	out	SPI_PORT, tmp
 	ret
 
@@ -26,6 +22,7 @@ spi_init:
 ; data - r24
 ; size - r25
 spi_write_byte:
+	push r25
 	ldi r25, 0x8
 spi_write:
 	lsl r24
@@ -41,12 +38,14 @@ mosi_done:
 	cbi SPI_PORT, SCK
 	dec r25
 	brne spi_write
+	pop r25
 	ret
 
 ; +++++++++++++++++++++++++++
 ; r24 - result byte
 spi_read_byte:
-	ldi r24, 0x0
+	push r25
+	clr r24
 	ldi r25, 0x8
 spi_read:
 	; output data is changed on the falling edge of SCL
@@ -62,4 +61,5 @@ spi_read:
 	brne spi_read
 	
 	cbi SPI_PORT, MISO
+	pop r25
 	ret
