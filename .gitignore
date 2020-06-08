@@ -1,3 +1,6 @@
 build
 revisions
 **/*.obj
+**/*.l#?
+**/*.s#?
+**/*.b#?
