@@ -1,5 +1,5 @@
-.equ CS 	= PD0
-.equ INT 	= PD1
+.equ CS 	= PD5
+.equ INT 	= PD4
 
 .equ CS_INT_PORT 		= PORTD
 .equ CS_INT_PORT_DIR	= DDRD
@@ -30,11 +30,15 @@ rtc_setup:
 	rcall spi_write_byte
 	ldi r24, 0b01010000
 	rcall spi_write_byte	; interrupt
-	ldi r24, 0x00
+	
 ; setup time
+	ldi r24, 0x00
 	rcall spi_write_byte	; seconds
+	ldi r24, 0b00010101     ; 15min
 	rcall spi_write_byte	; minutes
+	ldi r24, 0b10 			; 2hour
 	rcall spi_write_byte	; hours
+	ldi r24, 0x00
 	rcall spi_write_byte	; days
 	rcall spi_write_byte	; weekdays
 	rcall spi_write_byte	; months

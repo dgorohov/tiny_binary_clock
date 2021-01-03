@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.6.2">
+<eagle version="9.4.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -249,52 +249,6 @@ Source: http://www.nxp.com/documents/data_sheet/74ABT125.pdf</description>
 <rectangle x1="0.15" y1="0.1" x2="0.8" y2="0.45" layer="31"/>
 <rectangle x1="0.15" y1="-0.45" x2="0.8" y2="-0.1" layer="31"/>
 <rectangle x1="-0.8" y1="-0.45" x2="-0.15" y2="-0.1" layer="31"/>
-</package>
-<package name="MLF16" urn="urn:adsk.eagle:footprint:8083204/1">
-<description>&lt;b&gt;HP-VFQFP-N16&lt;/b&gt; Micro Lead Frame package (MLF)</description>
-<wire x1="-1.875" y1="1.55" x2="-1.55" y2="1.875" width="0.254" layer="21"/>
-<wire x1="-1.55" y1="1.875" x2="1.55" y2="1.875" width="0.254" layer="51"/>
-<wire x1="1.55" y1="-1.875" x2="-1.55" y2="-1.875" width="0.254" layer="51"/>
-<wire x1="-1.55" y1="-1.875" x2="-1.875" y2="-1.55" width="0.254" layer="21"/>
-<wire x1="-1.875" y1="-1.55" x2="-1.875" y2="1.55" width="0.254" layer="51"/>
-<wire x1="1.875" y1="1.55" x2="1.875" y2="-1.55" width="0.254" layer="51"/>
-<wire x1="1.55" y1="1.875" x2="1.875" y2="1.55" width="0.254" layer="21"/>
-<wire x1="1.875" y1="-1.55" x2="1.55" y2="-1.875" width="0.254" layer="21"/>
-<circle x="-0.9" y="0.9" radius="0.2236" width="0.254" layer="21"/>
-<smd name="1" x="-1.75" y="0.975" dx="0.9" dy="0.35" layer="1" roundness="50"/>
-<smd name="2" x="-1.75" y="0.325" dx="0.9" dy="0.35" layer="1" roundness="50"/>
-<smd name="3" x="-1.75" y="-0.325" dx="0.9" dy="0.35" layer="1" roundness="50"/>
-<smd name="4" x="-1.75" y="-0.975" dx="0.9" dy="0.35" layer="1" roundness="50"/>
-<smd name="5" x="-0.975" y="-1.75" dx="0.35" dy="0.9" layer="1" roundness="50"/>
-<smd name="6" x="-0.325" y="-1.75" dx="0.35" dy="0.9" layer="1" roundness="50"/>
-<smd name="7" x="0.325" y="-1.75" dx="0.35" dy="0.9" layer="1" roundness="50"/>
-<smd name="8" x="0.975" y="-1.75" dx="0.35" dy="0.9" layer="1" roundness="50"/>
-<smd name="9" x="1.75" y="-0.975" dx="0.9" dy="0.35" layer="1" roundness="50"/>
-<smd name="10" x="1.75" y="-0.325" dx="0.9" dy="0.35" layer="1" roundness="50"/>
-<smd name="11" x="1.75" y="0.325" dx="0.9" dy="0.35" layer="1" roundness="50"/>
-<smd name="12" x="1.75" y="0.975" dx="0.9" dy="0.35" layer="1" roundness="50"/>
-<smd name="13" x="0.975" y="1.75" dx="0.35" dy="0.9" layer="1" roundness="50"/>
-<smd name="14" x="0.325" y="1.75" dx="0.35" dy="0.9" layer="1" roundness="50"/>
-<smd name="15" x="-0.325" y="1.75" dx="0.35" dy="0.9" layer="1" roundness="50"/>
-<smd name="16" x="-0.975" y="1.75" dx="0.35" dy="0.9" layer="1" roundness="50"/>
-<text x="-2.29" y="2.175" size="1.27" layer="25">&gt;NAME</text>
-<text x="-2.29" y="-3.445" size="1.27" layer="27">&gt;VALUE</text>
-<rectangle x1="-1.85" y1="0.825" x2="-1.4" y2="1.125" layer="51"/>
-<rectangle x1="-1.85" y1="0.175" x2="-1.4" y2="0.475" layer="51"/>
-<rectangle x1="-1.85" y1="-0.475" x2="-1.4" y2="-0.175" layer="51"/>
-<rectangle x1="-1.85" y1="-1.125" x2="-1.4" y2="-0.825" layer="51"/>
-<rectangle x1="-1.125" y1="-1.85" x2="-0.825" y2="-1.4" layer="51"/>
-<rectangle x1="-0.475" y1="-1.85" x2="-0.175" y2="-1.4" layer="51"/>
-<rectangle x1="0.175" y1="-1.85" x2="0.475" y2="-1.4" layer="51"/>
-<rectangle x1="0.825" y1="-1.85" x2="1.125" y2="-1.4" layer="51"/>
-<rectangle x1="1.4" y1="-1.125" x2="1.85" y2="-0.825" layer="51"/>
-<rectangle x1="1.4" y1="-0.475" x2="1.85" y2="-0.175" layer="51"/>
-<rectangle x1="1.4" y1="0.175" x2="1.85" y2="0.475" layer="51"/>
-<rectangle x1="1.4" y1="0.825" x2="1.85" y2="1.125" layer="51"/>
-<rectangle x1="0.825" y1="1.4" x2="1.125" y2="1.85" layer="51"/>
-<rectangle x1="0.175" y1="1.4" x2="0.475" y2="1.85" layer="51"/>
-<rectangle x1="-0.475" y1="1.4" x2="-0.175" y2="1.85" layer="51"/>
-<rectangle x1="-1.125" y1="1.4" x2="-0.825" y2="1.85" layer="51"/>
 </package>
 <package name="MLF20" urn="urn:adsk.eagle:footprint:8083205/1">
 <description>&lt;b&gt;HP-VFQFP-N20&lt;/b&gt; Micro Lead Frame package (MLF)</description>
@@ -8440,6 +8394,34 @@ Source: &lt;a href="http://www.atmel.com/Images/doc2543.pdf"&gt; Data sheet &lt;
 <vertex x="9.831259375" y="24.617228125"/>
 </polygon>
 </package>
+<package name="QFN20-.45MMPITCH">
+<wire x1="-1.5" y1="-1.5" x2="-1.5" y2="1.2" width="0.0762" layer="21"/>
+<wire x1="-1.5" y1="1.2" x2="-1.2" y2="1.5" width="0.0762" layer="21"/>
+<wire x1="-1.2" y1="1.5" x2="1.5" y2="1.5" width="0.0762" layer="21"/>
+<wire x1="1.5" y1="1.5" x2="1.5" y2="-1.5" width="0.0762" layer="21"/>
+<wire x1="1.5" y1="-1.5" x2="-1.5" y2="-1.5" width="0.0762" layer="21"/>
+<smd name="21" x="0" y="0" dx="1.55" dy="1.55" layer="1"/>
+<smd name="1" x="-1.45" y="0.885" dx="0.5" dy="0.22" layer="1"/>
+<smd name="5" x="-1.45" y="-0.885" dx="0.5" dy="0.22" layer="1"/>
+<smd name="11" x="1.45" y="-0.885" dx="0.5" dy="0.22" layer="1"/>
+<smd name="15" x="1.45" y="0.885" dx="0.5" dy="0.22" layer="1"/>
+<smd name="16" x="0.885" y="1.45" dx="0.22" dy="0.5" layer="1"/>
+<smd name="20" x="-0.885" y="1.45" dx="0.22" dy="0.5" layer="1"/>
+<smd name="10" x="0.885" y="-1.45" dx="0.22" dy="0.5" layer="1"/>
+<smd name="6" x="-0.885" y="-1.45" dx="0.22" dy="0.5" layer="1"/>
+<smd name="3" x="-1.4" y="0.015" dx="0.6" dy="0.22" layer="1"/>
+<smd name="13" x="1.4" y="0.015" dx="0.6" dy="0.22" layer="1"/>
+<smd name="8" x="-0.015" y="-1.4" dx="0.6" dy="0.22" layer="1" rot="R90"/>
+<smd name="18" x="-0.015" y="1.4" dx="0.6" dy="0.22" layer="1" rot="R90"/>
+<smd name="2" x="-1.4" y="0.435" dx="0.6" dy="0.22" layer="1" rot="R180"/>
+<smd name="4" x="-1.4" y="-0.435" dx="0.6" dy="0.22" layer="1"/>
+<smd name="7" x="-0.435" y="-1.4" dx="0.22" dy="0.6" layer="1"/>
+<smd name="9" x="0.435" y="-1.4" dx="0.6" dy="0.22" layer="1" rot="R90"/>
+<smd name="12" x="1.4" y="-0.435" dx="0.6" dy="0.22" layer="1"/>
+<smd name="14" x="1.4" y="0.465" dx="0.6" dy="0.22" layer="1"/>
+<smd name="17" x="0.435" y="1.4" dx="0.6" dy="0.22" layer="1" rot="R90"/>
+<smd name="19" x="-0.465" y="1.4" dx="0.6" dy="0.22" layer="1" rot="R90"/>
+</package>
 </packages>
 <symbols>
 <symbol name="PCA21125">
@@ -8666,6 +8648,33 @@ Source: &lt;a href="http://www.atmel.com/Images/doc2543.pdf"&gt; Data sheet &lt;
 <device name="MLF20-4X4" package="MLF20-4X4">
 <connects>
 <connect gate="G$1" pin="GND" pad="8 TH"/>
+<connect gate="G$1" pin="PA0" pad="3"/>
+<connect gate="G$1" pin="PA1" pad="2"/>
+<connect gate="G$1" pin="PB0" pad="10"/>
+<connect gate="G$1" pin="PB1" pad="11"/>
+<connect gate="G$1" pin="PB2" pad="12"/>
+<connect gate="G$1" pin="PB3" pad="13"/>
+<connect gate="G$1" pin="PB4" pad="14"/>
+<connect gate="G$1" pin="PB5" pad="15"/>
+<connect gate="G$1" pin="PB6" pad="16"/>
+<connect gate="G$1" pin="PB7" pad="17"/>
+<connect gate="G$1" pin="PD0" pad="20"/>
+<connect gate="G$1" pin="PD1" pad="1"/>
+<connect gate="G$1" pin="PD2" pad="4"/>
+<connect gate="G$1" pin="PD3" pad="5"/>
+<connect gate="G$1" pin="PD4" pad="6"/>
+<connect gate="G$1" pin="PD5" pad="7"/>
+<connect gate="G$1" pin="PD6" pad="9"/>
+<connect gate="G$1" pin="RESET" pad="19"/>
+<connect gate="G$1" pin="VCC" pad="18"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="QFN20-3X3" package="QFN20-.45MMPITCH">
+<connects>
+<connect gate="G$1" pin="GND" pad="8 21"/>
 <connect gate="G$1" pin="PA0" pad="3"/>
 <connect gate="G$1" pin="PA1" pad="2"/>
 <connect gate="G$1" pin="PB0" pad="10"/>

@@ -24,19 +24,19 @@
 ;		  disabled/set to high impedance state and don’t allow current to flow. 
 ;		  When OE gets low voltage, the output pins work normally.
 
-.equ HC595_OE			= PB2
 
 .equ HC595_OE_PORT 		= PORTB
 .equ HC595_OE_PORT_DIR 	= DDRB
 .equ HC595_OE_PIN 		= PINB
 
-.equ HC595_PORT 		= PORTD
-.equ HC595_PORT_DIR 	= DDRD
+.equ HC595_PORT 		= PORTB
+.equ HC595_PORT_DIR 	= DDRB
 
-.equ HC595_DATA			= PD5
-.equ HC595_LATCH		= PD4
-.equ HC595_CLK			= PD3
-.equ HC595_CLEAR		= PD2
+.equ HC595_DATA			= PB0
+.equ HC595_OE			= PB1
+.equ HC595_LATCH		= PB2	; STCP
+.equ HC595_CLK			= PB3	; SHCP
+.equ HC595_CLEAR		= PB4
 
 .ifndef BRIGHTNESS
 .equ BRIGHTNESS 		= 230
