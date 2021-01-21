@@ -1,10 +1,16 @@
-.equ SCK 	= PB7
-.equ MISO 	= PB6
-.equ MOSI 	= PB5
+; --- TOP --
+; RESET MISO
+;   CLK MOSI
+; ----------
 
-.equ SPI_PORT 		= PORTB
-.equ SPI_PIN 		= PINB
-.equ SPI_PORT_DIR 	= DDRB
+
+.equ SCK 	= PD1
+.equ MISO 	= PD3
+.equ MOSI 	= PD2
+
+.equ SPI_PORT 		= PORTD
+.equ SPI_PIN 		= PIND
+.equ SPI_PORT_DIR 	= DDRD
 
 spi_init:
 	in tmp, SPI_PORT_DIR
